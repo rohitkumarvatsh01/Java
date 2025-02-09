@@ -15,7 +15,7 @@ public class ArmstrongNumber {
             num /= 10;
         }
 
-        if (store == arm){
+        if (store == arm) {
             return true;
         } else {
             return false;
@@ -28,6 +28,6 @@ public class ArmstrongNumber {
         System.out.println("Enter the Number: ");
         int num = scanner.nextInt();
 
-        System.out.println("Number "+ num + "is Armstrong Number: "+ armstrongNumber(num));
+        System.out.println("Number " + num + "is Armstrong Number: " + armstrongNumber(num));
     }
 }

@@ -10,7 +10,7 @@ public class PrintASCIICharacterValue {
         System.out.println("Enter the Character: ");
         char ch = sc.next().charAt(0);
 
-        int result = (int)ch;
+        int result = (int) ch;
 
         System.out.println(result);
     }
