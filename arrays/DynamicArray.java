@@ -1,0 +1,23 @@
+package arrays;
+
+import java.util.Scanner;
+
+public class DynamicArray {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the Size of Array: ");
+        int size = scanner.nextInt();
+
+        System.out.println("Enter the Element of Array: ");
+        int[] arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        System.out.println("Printing Array: ");
+        for (int i = 0; i < size; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
