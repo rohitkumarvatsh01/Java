@@ -2,19 +2,17 @@ package arrays;
 
 import java.util.Scanner;
 
-public class CopyElementOneArrayToAnother {
+public class CountOccurrenceOfParticularElementInArray {
 
-    public static void copyElementOneArrayToAnother(int[] arr) {
-        int[] brr = new int[arr.length];
-        System.arraycopy(arr, 0, brr, 0, arr.length);
-        printArray(brr);
-    }
+    public static Integer countOccurrenceOfParticularElementInArray(int[] arr, int key) {
+        int count = 0;
 
-    public static void printArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+            if (arr[i] == key) {
+                count++;
+            }
         }
-        System.out.println();
+        return count;
     }
 
     public static void main(String[] args) {
@@ -29,6 +27,9 @@ public class CopyElementOneArrayToAnother {
             arr[i] = scanner.nextInt();
         }
 
-        copyElementOneArrayToAnother(arr);
+        System.out.println("Enter the Key Element of Array: ");
+        int key = scanner.nextInt();
+
+        System.out.println("Total Occurrence of Key Element of Array: " + countOccurrenceOfParticularElementInArray(arr, key));
     }
 }
