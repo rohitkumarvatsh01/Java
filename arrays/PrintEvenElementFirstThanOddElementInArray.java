@@ -19,8 +19,9 @@ public class PrintEvenElementFirstThanOddElementInArray {
         }
     }
 
-
     public static void main(String[] args) {
-        ArrayInput.inputOfArray();
+        int[] arr = ArrayInput.inputOfArray();
+        printEvenElementFirstThanOddElementInArray(arr);
+        PrintArray.printArray(arr);
     }
 }
