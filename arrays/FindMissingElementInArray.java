@@ -17,16 +17,16 @@ public class FindMissingElementInArray {
     }
 
     public static int missingElementArray2(int[] arr) {
-        Set<Integer> set=new HashSet<>();
-        int n=arr.length+1;
+        Set<Integer> set = new HashSet<>();
+        int n = arr.length + 1;
 
-        for(int num:arr){
-            if(num>0)
+        for (int num : arr) {
+            if (num > 0)
                 set.add(num);
         }
 
-        for (int i=1; i<=n; i++){
-            if(!set.contains(i)){
+        for (int i = 1; i <= n; i++) {
+            if (!set.contains(i)) {
                 return i;
             }
         }
