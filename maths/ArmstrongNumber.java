@@ -15,11 +15,7 @@ public class ArmstrongNumber {
             num /= 10;
         }
 
-        if (store == arm) {
-            return true;
-        } else {
-            return false;
-        }
+        return store == arm;
     }
 
     public static void main(String[] args) {

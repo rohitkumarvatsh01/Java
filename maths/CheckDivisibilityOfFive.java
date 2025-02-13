@@ -5,11 +5,7 @@ import java.util.Scanner;
 public class CheckDivisibilityOfFive {
 
     public static boolean checkDivisibilityOfFive(int num) {
-        if (num % 5 == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return num % 5 == 0;
     }
 
     public static void main(String[] args) {

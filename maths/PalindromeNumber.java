@@ -15,11 +15,7 @@ public class PalindromeNumber {
             num /= 10;
         }
 
-        if (reverse == store) {
-            return true;
-        } else {
-            return false;
-        }
+        return reverse == store;
     }
 
     public static void main(String[] args) {
