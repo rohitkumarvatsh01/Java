@@ -6,9 +6,9 @@ public class FirstLetterUpperCaseString {
         char[] charArray = s.toCharArray();
         charArray[0] = Character.toUpperCase(charArray[0]);
 
-        for (int i = 1; i < charArray.length-1; i++) {
+        for (int i = 1; i < charArray.length - 1; i++) {
             if (charArray[i] == ' ') {
-                charArray[i+1] = Character.toUpperCase(charArray[i+1]);
+                charArray[i + 1] = Character.toUpperCase(charArray[i + 1]);
             }
         }
         return charArray;

@@ -3,11 +3,7 @@ package strings;
 public class StringPresentOrNot {
 
     public static boolean stringPresentOrNot(String s1, String s2) {
-        if (s1.contains(s2)) {
-            return true;
-        } else {
-            return false;
-        }
+        return s1.contains(s2);
     }
 
     public static void main(String[] args) {
