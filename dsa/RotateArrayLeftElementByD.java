@@ -1,3 +1,10 @@
+/*
+Input = [1,2,3,4,5] d=2
+Output = 3,4,5,1,2
+Approach: [1,2,3,4,5] -> [2,1,5,4,3] -> [3,4,5,2,1]
+        : Rotate the array 0 to d, Rotate the array d to arr length and Rotate the array 0 to arr length.
+ */
+
 package dsa;
 
 import arrays.ArrayInput;
