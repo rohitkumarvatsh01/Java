@@ -4,37 +4,51 @@ Output = 3,4,5,1,2
 Approach: [1,2,3,4,5] -> [2,1,5,4,3] -> [3,4,5,2,1]
         : Rotate the array 0 to d, Rotate the array d to arr length and Rotate the array 0 to arr length.
  */
-
 package dsa;
 
-import arrays.ArrayInput;
-import arrays.PrintArray;
-import maths.NumberInput;
+import java.util.Scanner;
 
 public class RotateArrayLeftElementByD {
 
-    public static void reverseArray(int[] arr, int left, int right) {
-        while (left <= right) {
-            int temp = arr[left];
-            arr[left] = arr[right];
-            arr[right] = temp;
-            left++;
-            right--;
+    public static void printArray(int[] arr) {
+        for (int j : arr) {
+            System.out.print(j + " ");
         }
     }
 
-    public static void leftRotateArray(int[] arr, int d) {
-        reverseArray(arr, 0, d - 1);
-        reverseArray(arr, d, arr.length - 1);
-        reverseArray(arr, 0, arr.length - 1);
+    public static void reverseArray(int[] arr, int start, int end) {
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
 
-        PrintArray.printArray(arr);
+    public static void rotateArray(int[] arr, int d) {
+        int n = arr.length;
+        d = d % n;
+        reverseArray(arr, 0, d - 1);
+        reverseArray(arr, d, n - 1);
+        reverseArray(arr, 0, n - 1);
+        printArray(arr);
     }
 
     public static void main(String[] args) {
-        int[] arr = ArrayInput.inputOfArray();
-        int d = NumberInput.inputOfNumber();
+        Scanner scanner = new Scanner(System.in);
 
-        leftRotateArray(arr, d);
+        System.out.println("Enter the size of Array: ");
+        int n = scanner.nextInt();
+
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        System.out.println("Enter the size of D: ");
+        int d = scanner.nextInt();
+
+        rotateArray(arr, d);
     }
 }
