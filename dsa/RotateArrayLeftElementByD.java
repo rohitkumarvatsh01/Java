@@ -1,7 +1,7 @@
 /*
 Input = [1,2,3,4,5] d=2
 Output = 3,4,5,1,2
-Approach: [1,2,3,4,5] -> [2,1,5,4,3] -> [3,4,5,2,1]
+Approach: [1,2,3,4,5] -> [2,1,5,4,3] -> [3,4,5,1,2]
         : Rotate the array 0 to d, Rotate the array d to arr length and Rotate the array 0 to arr length.
  */
 package dsa;
@@ -41,6 +41,7 @@ public class RotateArrayLeftElementByD {
         System.out.println("Enter the size of Array: ");
         int n = scanner.nextInt();
 
+        System.out.println("Enter the Element of Array: ");
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = scanner.nextInt();
